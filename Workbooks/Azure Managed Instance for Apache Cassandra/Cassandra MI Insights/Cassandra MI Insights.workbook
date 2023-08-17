@@ -109,6 +109,14 @@
             "style": "link"
           },
           {
+            "id": "d1a3d0cc-29fa-485d-ade9-9f18d9014576",
+            "cellValue": "selectedTab",
+            "linkTarget": "parameter",
+            "linkLabel": "Requests",
+            "subTarget": "Requests",
+            "style": "link"
+          },
+          {
             "id": "3194cf71-744c-4054-a3c2-dec24b6ba512",
             "cellValue": "selectedTab",
             "linkTarget": "parameter",
@@ -169,7 +177,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters-Cassandra Client Request-cassandra_client_request_timeouts",
@@ -177,7 +185,7 @@
             "splitBy": "request_type"
           }
         ],
-        "title": "Timeouts by request type",
+        "title": "Timeouts by request type (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],        
         "gridSettings": {
           "rowLimit": 10000
@@ -211,7 +219,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters-Cassandra Client Request-cassandra_client_request_failures",
@@ -219,7 +227,7 @@
             "splitBy": "request_type"
           }
         ],
-        "title": "Failures by request type",
+        "title": "Failures by request type (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],  
         "gridSettings": {
           "rowLimit": 10000
@@ -253,7 +261,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_cql_regular_statements_executed",
@@ -261,7 +269,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "Regular statements executed by node",
+        "title": "Regular statements executed by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],  
         "gridSettings": {
           "rowLimit": 10000
@@ -295,7 +303,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_cql_prepared_statements_executed",
@@ -303,7 +311,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "Prepared statements executed by node",
+        "title": "Prepared statements executed by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -337,7 +345,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_client_request_latency_p99",
@@ -345,7 +353,7 @@
             "splitBy": "request_type"
           }
         ],
-        "title": "P99 Overall request latency by request type",
+        "title": "P99 Overall request latency by request type (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -375,7 +383,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_percent_repaired",
@@ -383,7 +391,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "Percentage of tables repaired by node",
+        "title": "Percentage of tables repaired by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -413,7 +421,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_live_disk_space_used",
@@ -421,7 +429,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "Live disk space used by node",
+        "title": "Live disk space used by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -452,7 +460,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_total_disk_space_used",
@@ -460,7 +468,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "Total disk space used by node",
+        "title": "Total disk space used by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -491,7 +499,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_all_memtables_live_data_size",
@@ -499,7 +507,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "All memtables live data size by node",
+        "title": "All memtables live data size by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -530,7 +538,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_all_memtables_off_heap_size",
@@ -538,7 +546,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "All memtables off heap size by node",
+        "title": "All memtables off heap size by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -552,6 +560,167 @@
       "customWidth": "50",
       "name": "All memtables off heap size"
     },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "ad1aa1b1-6e22-4d25-a17e-0efe7aee8cdb",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.documentdb/cassandraclusters",
+        "metricScope": 0,
+        "resourceParameter": "Resources",
+        "resourceIds": [
+          "{Resources}"
+        ],
+        "timeContextFromParameter": "TimeRange",
+        "timeContext": {
+          "durationMs": 14400000
+        },
+        "timeGrain": "PT1M", "metrics": [
+          {
+            "namespace": "microsoft.documentdb/cassandraclusters",
+            "metric": "microsoft.documentdb/cassandraclusters--diskio_read_bytes",
+            "aggregation": 1,
+            "splitBy": "Address"
+          }
+        ],
+        "title": "Disk I/O read bytes by node (total)",
+        "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "selectedTab",
+        "comparison": "isEqualTo",
+        "value": "Requests"
+      },
+      "customWidth": "50",
+      "name": "Disk I/O read bytes"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "9c3c797c-c377-4737-8f9a-7c4c0be016e4",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.documentdb/cassandraclusters",
+        "metricScope": 0,
+        "resourceParameter": "Resources",
+        "resourceIds": [
+          "{Resources}"
+        ],
+        "timeContextFromParameter": "TimeRange",
+        "timeContext": {
+          "durationMs": 14400000
+        },
+        "timeGrain": "PT1M", "metrics": [
+          {
+            "namespace": "microsoft.documentdb/cassandraclusters",
+            "metric": "microsoft.documentdb/cassandraclusters--diskio_write_bytes",
+            "aggregation": 1,
+            "splitBy": "Address"
+          }
+        ],
+        "title": "Disk I/O write bytes by node (total)",
+        "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "selectedTab",
+        "comparison": "isEqualTo",
+        "value": "Requests"
+      },
+      "customWidth": "50",
+      "name": "Disk I/O write bytes"
+    },
+
+    {
+      "type": 10,
+      "content": {
+        "chartId": "2ed4d2c3-f3ad-4e54-98a2-236f4f2638cd",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.documentdb/cassandraclusters",
+        "metricScope": 0,
+        "resourceParameter": "Resources",
+        "resourceIds": [
+          "{Resources}"
+        ],
+        "timeContextFromParameter": "TimeRange",
+        "timeContext": {
+          "durationMs": 14400000
+        },
+        "timeGrain": "PT1M", "metrics": [
+          {
+            "namespace": "microsoft.documentdb/cassandraclusters",
+            "metric": "microsoft.documentdb/cassandraclusters--diskio_reads",
+            "aggregation": 1,
+            "splitBy": "Address"
+          }
+        ],
+        "title": "Disk I/O read counts by node",
+        "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "selectedTab",
+        "comparison": "isEqualTo",
+        "value": "Requests"
+      },
+      "customWidth": "50",
+      "name": "Disk I/O read counts"
+    },
+
+
+    {
+      "type": 10,
+      "content": {
+        "chartId": "fabe048a-92ce-4082-aac5-d8a1ce54ff50",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.documentdb/cassandraclusters",
+        "metricScope": 0,
+        "resourceParameter": "Resources",
+        "resourceIds": [
+          "{Resources}"
+        ],
+        "timeContextFromParameter": "TimeRange",
+        "timeContext": {
+          "durationMs": 14400000
+        },
+        "timeGrain": "PT1M", "metrics": [
+          {
+            "namespace": "microsoft.documentdb/cassandraclusters",
+            "metric": "microsoft.documentdb/cassandraclusters--diskio_writes",
+            "aggregation": 1,
+            "splitBy": "Address"
+          }
+        ],
+        "title": "Disk I/O write counts by node",
+        "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "selectedTab",
+        "comparison": "isEqualTo",
+        "value": "Requests"
+      },
+      "customWidth": "50",
+      "name": "Disk I/O write counts"
+    },
+
+
     {
       "type": 10,
       "content": {
@@ -569,7 +738,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_client_request_latency_p99",
@@ -577,7 +746,7 @@
             "splitBy": "request_type"
           }
         ],
-        "title": "P99 Overall request latency by request type",
+        "title": "P99 Overall request latency by request type (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -607,7 +776,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_read_latency_p99",
@@ -615,7 +784,7 @@
             "splitBy": "keyspace"
           }
         ],
-        "title": "P99 read latency (in microseconds) by keyspace",
+        "title": "P99 read latency (in microseconds) by keyspace (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -649,7 +818,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_write_latency_p99",
@@ -657,7 +826,7 @@
             "splitBy": "keyspace"
           }
         ],
-        "title": "P99 write latency (in microseconds) by keyspace",
+        "title": "P99 write latency (in microseconds) by keyspace (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -691,7 +860,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_percent_repaired",
@@ -699,7 +868,7 @@
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "Percentage of tables repaired by node",
+        "title": "Percentage of tables repaired by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -728,7 +897,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_compaction_bytes_written",
@@ -768,7 +937,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_table_pending_compactions",
@@ -776,7 +945,7 @@
             "splitBy": "keyspace"
           }
         ],
-        "title": "pending compactions by keyspace (avg)",
+        "title": "pending compactions by keyspace (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -791,7 +960,7 @@
       "styleSettings": {
         "maxWidth": "25"
       }
-    },
+    },    
     {
       "type": 10,
       "content": {
@@ -809,15 +978,141 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
+          {
+            "namespace": "microsoft.documentdb/cassandraclusters",
+            "metric": "microsoft.documentdb/cassandraclusters--cpu",
+            "aggregation": 4,
+            "splitBy": "Address"
+          }
+        ],
+        "title": "CPU usage active by node (average)",
+        "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "selectedTab",
+        "comparison": "isEqualTo",
+        "value": "System"
+      },
+      "customWidth": "50",
+      "name": "CPU usage active by node (max)",
+      "styleSettings": {
+        "maxWidth": "25"
+      }
+    },  
+    {
+      "type": 10,
+      "content": {
+        "chartId": "a4b9ea43-34de-470c-bd05-1d196d110018",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.documentdb/cassandraclusters",
+        "metricScope": 0,
+        "resourceParameter": "Resources",
+        "resourceIds": [
+          "{Resources}"
+        ],
+        "timeContextFromParameter": "TimeRange",
+        "timeContext": {
+          "durationMs": 14400000
+        },
+        "timeGrain": "PT1M", "metrics": [
+          {
+            "namespace": "microsoft.documentdb/cassandraclusters",
+            "metric": "microsoft.documentdb/cassandraclusters--disk_utilization",
+            "aggregation": 3,
+            "splitBy": "Address"
+          }
+        ],
+        "title": "Disk utilisation by node (max)",
+        "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "selectedTab",
+        "comparison": "isEqualTo",
+        "value": "System"
+      },
+      "customWidth": "50",
+      "name": "Disk utilisation by node (max)",
+      "styleSettings": {
+        "maxWidth": "25"
+      }
+    },  
+    {
+      "type": 10,
+      "content": {
+        "chartId": "a4b9ea43-34de-470c-bd05-1d196d110018",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.documentdb/cassandraclusters",
+        "metricScope": 0,
+        "resourceParameter": "Resources",
+        "resourceIds": [
+          "{Resources}"
+        ],
+        "timeContextFromParameter": "TimeRange",
+        "timeContext": {
+          "durationMs": 14400000
+        },
+        "timeGrain": "PT1M", "metrics": [
+          {
+            "namespace": "microsoft.documentdb/cassandraclusters",
+            "metric": "microsoft.documentdb/cassandraclusters--percent_mem",
+            "aggregation": 3,
+            "splitBy": "Address"
+          }
+        ],
+        "title": "Memory utilisation by node (max)",
+        "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "selectedTab",
+        "comparison": "isEqualTo",
+        "value": "System"
+      },
+      "customWidth": "50",
+      "name": "Memory utilisation by node (max)",
+      "styleSettings": {
+        "maxWidth": "25"
+      }
+    },     
+    {
+      "type": 10,
+      "content": {
+        "chartId": "a4b9ea43-34de-470c-bd05-1d196d110018",
+        "version": "MetricsItem/2.0",
+        "size": 1,
+        "chartType": 2,
+        "resourceType": "microsoft.documentdb/cassandraclusters",
+        "metricScope": 0,
+        "resourceParameter": "Resources",
+        "resourceIds": [
+          "{Resources}"
+        ],
+        "timeContextFromParameter": "TimeRange",
+        "timeContext": {
+          "durationMs": 14400000
+        },
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_commit_log_waiting_on_commit_latency_histogram",
-            "aggregation": 1,
+            "aggregation": 4,
             "splitBy": "cassandra_node"
           }
         ],
-        "title": "waiting on commit latency by node (total)",
+        "title": "waiting on commit latency by node (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -851,7 +1146,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_jvm_gc_count",
@@ -893,7 +1188,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_jvm_gc_time",
@@ -935,7 +1230,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_thread_pools_active_tasks",
@@ -943,7 +1238,7 @@
             "splitBy": "pool_name"
           }
         ],
-        "title": "active tasks by pool name (avg)",
+        "title": "active tasks by pool name (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -977,7 +1272,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_thread_pools_currently_blocked_tasks",
@@ -1019,7 +1314,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_thread_pools_max_pool_size",
@@ -1027,7 +1322,7 @@
             "splitBy": "pool_name"
           }
         ],
-        "title": "max pool size by pool name (avg)",
+        "title": "max pool size by pool name (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -1061,7 +1356,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_thread_pools_pending_tasks",
@@ -1069,7 +1364,7 @@
             "splitBy": "pool_name"
           }
         ],
-        "title": "pending tasks by pool name (avg)",
+        "title": "pending tasks by pool name (average)",
         "filters": [{"key": "cassandra_datacenter","operator": 0,"valueParam": "Datacenter"}],
         "gridSettings": {
           "rowLimit": 10000
@@ -1103,7 +1398,7 @@
         "timeContext": {
           "durationMs": 14400000
         },
-        "metrics": [
+        "timeGrain": "PT1M", "metrics": [
           {
             "namespace": "microsoft.documentdb/cassandraclusters",
             "metric": "microsoft.documentdb/cassandraclusters--cassandra_thread_pools_total_blocked_tasks",
